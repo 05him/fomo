@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&family=Shizuru&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300&display=swap');
+
+:root{
+  --primary-bg-color: #040309;
+  --secondary-bg-color: rgb(250, 235, 215);
+  --primary-btn-color: rgb(237, 122, 122);
+  --secondary-btn-color: rgb(0, 255, 221);
+  --primary-font-color: white;
+  --secondary-font-color: black;
+  --card-overlay-bg: rgba(0, 0, 0, 0.699);
+  --toast-warning-color: rgb(226, 180, 51);
+  --toast-error-color: rgb(201, 21, 21);
+  --toast-success-color: rgb(57, 162, 57);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  color: var(--primary-font-color);
+  background-color: var(--primary-bg-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 14px;
+  border: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.flex-center{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary{
+  background-color: var(--primary-btn-color);
+  color: var(--primary-font-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-secondary{
+  background-color: transparent;
+  color: var(--secondary-btn-color);
+  border: 1px solid var(--secondary-btn-color)
 }
+
+@import url('./components/Heading/Heading.css');
+@import url('./components/Logo/Logo.css');
+@import url('./components/InputField/InputField.css');
+@import url('./pages/Landing/Landing.css');
+@import url('./components/Navbar/Navbar.css');
+@import url('./pages/Home/Home.css');

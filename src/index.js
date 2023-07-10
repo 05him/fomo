@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { makeServer } from "./server";
+import { ToastProvider, useToastAndLoader } from './context/ToastAndLoaderContext/ToastAndLoaderContext';
+import { AuthProvider, useAuth } from './context/AuthContext/AuthContext';
 
+export { useToastAndLoader, useAuth };
+
+// Call make Server
+makeServer();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <ToastProvider>
+      <AuthProvider>
     <App />
+      </AuthProvider>
+    </ToastProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

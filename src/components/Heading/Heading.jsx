@@ -1,0 +1,1 @@
+export const Heading = ({ title }) => <h1> {title} </h1>
