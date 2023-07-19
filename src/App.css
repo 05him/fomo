@@ -37,6 +37,8 @@ button{
   border-radius: 5px;
   padding: 0.5em;
   font-size: 14px;
+  color: white;
+  background-color: var(--primary-btn-color);
   border: none;
 }
 

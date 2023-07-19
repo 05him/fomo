@@ -8,7 +8,7 @@ import { formatDate } from "../utils/authUtils";
 
 export const posts = [
   {
-    _id: "b957755e-e47e-440d-af75-d95a336a2ec9 ",
+    _id: "b957755e-e47e-440d-af75-d95a336a2ec9",
     content: 'Hey there, this is my first post under the username @admin',
     likes: {
     likeCount: 4,
@@ -17,6 +17,7 @@ export const posts = [
       firstName: "Alessandra",
       lastName: "Kunde",
       username: "alessandra",
+       profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
       password: "admin",
       },
       {
@@ -24,6 +25,7 @@ export const posts = [
       firstName: "Jaydon",
       lastName: "Larkin",
       username: "jaydon",
+        profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
       password: "admin",
       },
       {
@@ -31,6 +33,7 @@ export const posts = [
       firstName: "Pedro",
       lastName: "Bins",
       username: "pedroBins",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
       password: "admin",
       },
       {
@@ -38,16 +41,18 @@ export const posts = [
       firstName: "Teresa",
       lastName: "Nader",
       username: "naderTeresa",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
       password: "admin",
       },],
     dislikedBy: [],
     },
     username: "admin",
     profileName: "Aadarsh Balika",
-    createdAt: "2021-06-04T11:44:20.257Z ",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+    createdAt: "2021-06-04T11:44:20.257Z",
     },
     {
-    _id: "9df5c518-2068-4371-9c34-67f1a66ec7b4 ",
+    _id: "9df5c518-2068-4371-9c34-67f1a66ec7b4",
     content: 'Hey there, this is my second post under the username @admin',
     likes: {
     likeCount: 0,
@@ -56,10 +61,11 @@ export const posts = [
     },
     username: "admin",
     profileName: "Aadarsh Balika",
-    createdAt: "2021-02-12T16:28:29.199Z ",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+    createdAt: "2021-02-12T16:28:29.199Z",
     },
     {
-    _id: "cef1395f-03ea-4154-83ff-2f6fc9c862a1 ",
+    _id: "cef1395f-03ea-4154-83ff-2f6fc9c862a1",
     content: 'Hey there, this is my third post under the username @admin',
     likes: {
     likeCount: 0,
@@ -68,10 +74,11 @@ export const posts = [
     },
     username: "admin",
     profileName: "Aadarsh Balika",
-    createdAt: "2022-05-30T18:36:33.087Z ",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+    createdAt: "2022-05-30T18:36:33.087Z",
     },
     {
-    _id: "5ccf90e2-0f74-4389-bf81-bf80d21e94c4 ",
+    _id: "5ccf90e2-0f74-4389-bf81-bf80d21e94c4",
     content: 'Hey there, this is my fourth post under the username @admin',
     likes: {
     likeCount: 0,
@@ -80,10 +87,11 @@ export const posts = [
     },
     username: "admin",
     profileName: "Aadarsh Balika",
-    createdAt: "2022-08-08T12:57:11.441Z ",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+    createdAt: "2022-08-08T12:57:11.441Z",
     },
     {
-    _id: "ba4a4475-93f5-498c-880c-c429291a3d96 ",
+    _id: "ba4a4475-93f5-498c-880c-c429291a3d96",
     content: 'Hey there, this is my fifth post under the username @admin',
     likes: {
     likeCount: 0,
@@ -92,10 +100,11 @@ export const posts = [
     },
     username: "admin",
     profileName: "Aadarsh Balika",
-    createdAt: "2022-11-16T18:30:46.241Z ",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
+    createdAt: "2022-11-16T18:30:46.241Z",
     },
     {
-    _id: "77a4b72f-7f3c-4de6-afe5-0fdd41fe5859 ",
+    _id: "77a4b72f-7f3c-4de6-afe5-0fdd41fe5859",
     content: 'Hey there, this is my first post under the username @alessandra',
     likes: {
     likeCount: 3,
@@ -104,6 +113,7 @@ export const posts = [
       firstName: "Alessandra",
       lastName: "Kunde",
       username: "alessandra",
+       profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
       password: "admin",
       },
       {
@@ -111,6 +121,7 @@ export const posts = [
       firstName: "Jaydon",
       lastName: "Larkin",
       username: "jaydon",
+        profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
       password: "admin",
       },
       {
@@ -118,16 +129,18 @@ export const posts = [
       firstName: "Teresa",
       lastName: "Nader",
       username: "naderTeresa",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
       password: "admin",
       },],
     dislikedBy: [],
     },
     username: "alessandra",
+     profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Alessandra Kunde",
-    createdAt: "2020-05-06T00:11:45.826Z ",
+    createdAt: "2020-05-06T00:11:45.826Z",
     },
     {
-    _id: "085f77e5-dfe2-42bf-b0a1-e9d49e291501 ",
+    _id: "085f77e5-dfe2-42bf-b0a1-e9d49e291501",
     content: 'Hey there, this is my second post under the username @alessandra',
     likes: {
     likeCount: 0,
@@ -135,11 +148,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "alessandra",
+     profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Alessandra Kunde",
-    createdAt: "2023-01-06T13:21:40.257Z ",
+    createdAt: "2023-01-06T13:21:40.257Z",
     },
     {
-    _id: "5ea56e7c-43b0-4b95-96ad-926e9227612f ",
+    _id: "5ea56e7c-43b0-4b95-96ad-926e9227612f",
     content: 'Hey there, this is my third post under the username @alessandra',
     likes: {
     likeCount: 0,
@@ -147,11 +161,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "alessandra",
+     profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Alessandra Kunde",
-    createdAt: "2021-08-05T17:51:32.399Z ",
+    createdAt: "2021-08-05T17:51:32.399Z",
     },
     {
-    _id: "8dfcc566-99b6-4605-9ffd-aa0c26bb03bf ",
+    _id: "8dfcc566-99b6-4605-9ffd-aa0c26bb03bf",
     content: 'Hey there, this is my fourth post under the username @alessandra',
     likes: {
     likeCount: 0,
@@ -159,11 +174,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "alessandra",
+     profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Alessandra Kunde",
-    createdAt: "2022-11-28T22:27:54.471Z ",
+    createdAt: "2022-11-28T22:27:54.471Z",
     },
     {
-    _id: "b891239b-22c9-4bac-8970-0d1adcfad51b ",
+    _id: "b891239b-22c9-4bac-8970-0d1adcfad51b",
     content: 'Hey there, this is my fifth post under the username @alessandra',
     likes: {
     likeCount: 0,
@@ -171,11 +187,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "alessandra",
+     profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Alessandra Kunde",
-    createdAt: "2022-05-19T21:48:06.885Z ",
+    createdAt: "2022-05-19T21:48:06.885Z",
     },
     {
-    _id: "935f5240-57f1-484d-b664-bea8458402a5 ",
+    _id: "935f5240-57f1-484d-b664-bea8458402a5",
     content: 'Hey there, this is my first post under the username @jaydon',
     likes: {
     likeCount: 0,
@@ -183,11 +200,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "jaydon",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     profileName: "Jaydon Larkin",
-    createdAt: "2022-01-08T10:07:48.970Z ",
+    createdAt: "2022-01-08T10:07:48.970Z",
     },
     {
-    _id: "cdf9147c-2236-4bd4-ae76-154127b2f12d ",
+    _id: "cdf9147c-2236-4bd4-ae76-154127b2f12d",
     content: 'Hey there, this is my second post under the username @jaydon',
     likes: {
     likeCount: 0,
@@ -195,11 +213,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "jaydon",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     profileName: "Jaydon Larkin",
-    createdAt: "2020-09-24T14:18:35.981Z ",
+    createdAt: "2020-09-24T14:18:35.981Z",
     },
     {
-    _id: "c08219bd-7ec0-4e47-8f8c-13a2687928bc ",
+    _id: "c08219bd-7ec0-4e47-8f8c-13a2687928bc",
     content: 'Hey there, this is my third post under the username @jaydon',
     likes: {
     likeCount: 0,
@@ -207,11 +226,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "jaydon",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     profileName: "Jaydon Larkin",
-    createdAt: "2021-02-01T11:59:41.514Z ",
+    createdAt: "2021-02-01T11:59:41.514Z",
     },
     {
-    _id: "8c44941e-f740-43ab-a029-e1d85833a1a4 ",
+    _id: "8c44941e-f740-43ab-a029-e1d85833a1a4",
     content: 'Hey there, this is my fourth post under the username @jaydon',
     likes: {
     likeCount: 0,
@@ -219,11 +239,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "jaydon",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     profileName: "Jaydon Larkin",
-    createdAt: "2022-03-18T15:21:23.340Z ",
+    createdAt: "2022-03-18T15:21:23.340Z",
     },
     {
-    _id: "275064fc-fffa-4d56-87a2-1c3b834d1dc5 ",
+    _id: "275064fc-fffa-4d56-87a2-1c3b834d1dc5",
     content: 'Hey there, this is my fifth post under the username @jaydon',
     likes: {
     likeCount: 0,
@@ -231,11 +252,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "jaydon",
+      profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     profileName: "Jaydon Larkin",
-    createdAt: "2020-05-09T01:05:56.322Z ",
+    createdAt: "2020-05-09T01:05:56.322Z",
     },
     {
-    _id: "a22fe41d-4728-4053-9a4a-3d783e90d9b8 ",
+    _id: "a22fe41d-4728-4053-9a4a-3d783e90d9b8",
     content: 'Hey there, this is my first post under the username @pedroBins',
     likes: {
     likeCount: 0,
@@ -243,11 +265,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "pedroBins",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Pedro Bins",
-    createdAt: "2020-04-06T22:05:04.784Z ",
+    createdAt: "2020-04-06T22:05:04.784Z",
     },
     {
-    _id: "4842a757-8c81-450d-b406-2c8123c5813c ",
+    _id: "4842a757-8c81-450d-b406-2c8123c5813c",
     content: 'Hey there, this is my second post under the username @pedroBins',
     likes: {
     likeCount: 0,
@@ -255,11 +278,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "pedroBins",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Pedro Bins",
-    createdAt: "2020-05-07T16:53:32.827Z ",
+    createdAt: "2020-05-07T16:53:32.827Z",
     },
     {
-    _id: "a2f04e35-b6fc-48c6-b7ff-0d0023ff7686 ",
+    _id: "a2f04e35-b6fc-48c6-b7ff-0d0023ff7686",
     content: 'Hey there, this is my third post under the username @pedroBins',
     likes: {
     likeCount: 0,
@@ -267,11 +291,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "pedroBins",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Pedro Bins",
-    createdAt: "2020-05-28T21:51:02.718Z ",
+    createdAt: "2020-05-28T21:51:02.718Z",
     },
     {
-    _id: "00f04ad1-a049-4713-b32b-27da8cccf722 ",
+    _id: "00f04ad1-a049-4713-b32b-27da8cccf722",
     content: 'Hey there, this is my fourth post under the username @pedroBins',
     likes: {
     likeCount: 0,
@@ -279,11 +304,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "pedroBins",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Pedro Bins",
-    createdAt: "2022-04-29T14:39:46.574Z ",
+    createdAt: "2022-04-29T14:39:46.574Z",
     },
     {
-    _id: "eff33553-245e-47f6-957b-389f7f7380a3 ",
+    _id: "eff33553-245e-47f6-957b-389f7f7380a3",
     content: 'Hey there, this is my fifth post under the username @pedroBins',
     likes: {
     likeCount: 0,
@@ -291,11 +317,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "pedroBins",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     profileName: "Pedro Bins",
-    createdAt: "2020-09-27T23:29:09.928Z ",
+    createdAt: "2020-09-27T23:29:09.928Z",
     },
     {
-    _id: "ecb12629-41ee-4494-a238-13179d6b2aa1 ",
+    _id: "ecb12629-41ee-4494-a238-13179d6b2aa1",
     content: 'Hey there, this is my first post under the username @naderTeresa',
     likes: {
     likeCount: 0,
@@ -303,11 +330,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "naderTeresa",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     profileName: "Teresa Nader",
-    createdAt: "2020-11-23T07:04:12.765Z ",
+    createdAt: "2020-11-23T07:04:12.765Z",
     },
     {
-    _id: "ec8ac7f5-7bb4-46d8-b34b-5737a4f688db ",
+    _id: "ec8ac7f5-7bb4-46d8-b34b-5737a4f688db",
     content: 'Hey there, this is my second post under the username @naderTeresa',
     likes: {
     likeCount: 0,
@@ -315,11 +343,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "naderTeresa",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     profileName: "Teresa Nader",
-    createdAt: "2022-03-16T18:30:07.856Z ",
+    createdAt: "2022-03-16T18:30:07.856Z",
     },
     {
-    _id: "1d10c736-f189-4a30-b732-bf894abdadce ",
+    _id: "1d10c736-f189-4a30-b732-bf894abdadce",
     content: 'Hey there, this is my third post under the username @naderTeresa',
     likes: {
     likeCount: 0,
@@ -327,11 +356,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "naderTeresa",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     profileName: "Teresa Nader",
-    createdAt: "2021-10-24T22:54:08.628Z ",
+    createdAt: "2021-10-24T22:54:08.628Z",
     },
     {
-    _id: "dae3e69c-862e-4618-85ee-8facc2030f03 ",
+    _id: "dae3e69c-862e-4618-85ee-8facc2030f03",
     content: 'Hey there, this is my fourth post under the username @naderTeresa',
     likes: {
     likeCount: 0,
@@ -339,11 +369,12 @@ export const posts = [
     dislikedBy: [],
     },
     username: "naderTeresa",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     profileName: "Teresa Nader",
-    createdAt: "2021-10-13T09:40:47.009Z ",
+    createdAt: "2021-10-13T09:40:47.009Z",
     },
     {
-    _id: "caa4431a-e04e-48af-b29f-cc0d1404e5d0 ",
+    _id: "caa4431a-e04e-48af-b29f-cc0d1404e5d0",
     content: 'Hey there, this is my fifth post under the username @naderTeresa',
     likes: {
     likeCount: 0,
@@ -351,7 +382,8 @@ export const posts = [
     dislikedBy: [],
     },
     username: "naderTeresa",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     profileName: "Teresa Nader",
-    createdAt: "2020-03-18T14:49:46.321Z ",
+    createdAt: "2020-03-18T14:49:46.321Z",
     },
 ];

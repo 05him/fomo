@@ -8,6 +8,7 @@ import redHeart from '../../assets/redHeart.svg';
 import bookmark from '../../assets/bookmark.svg';
 import bookmarked from '../../assets/bookmarked.svg';
 import share from '../../assets/share.svg';
+import { faker } from '@faker-js/faker';
 
 const handleSorting = (data, action) => {
     switch(action.type){
@@ -153,9 +154,12 @@ export const Home = () => {
     }
 
     const deletePost = async (id) => {
+        console.log(id);
         const deleteCall  = await axios.delete(`/api/posts/${id}`, {}, apiHeader);
+        console.log(deleteCall);
         fetchPosts();
     }
+
 
     useEffect(  () => {
         if(isLoggedIn){
@@ -198,12 +202,12 @@ export const Home = () => {
     <CreatePost />
 
             {
-                postToShow?.map( ({ content, profileName, createdAt, username, _id, likes }) => <div className="temp" >
-                    <div>
-                        <img src='' alt='img' />
-                        <div> {profileName} @{username} </div>
-                        <div> { calculateDate(createdAt) } </div>
+                postToShow?.map( ({ content, profileName, createdAt, username, _id, likes, profileUrl }) => <div className="post-container-box" >
+                    <div className="post-user-data" >
+                        <img src={profileUrl} alt={profileName.split()[0]} className="post-user-img" />
+                        <div className="post-username" > {profileName} @{username} </div>
                     </div>
+                        <div> { calculateDate(createdAt) } </div>
                      {content} <br/>
                      <div> 
                 <> <img src={ checkIfLiked(likes) ? redHeart : whiteHeart } alt='like dislike' onClick={ () => handlePostLike(_id, likes) } /> <span> {likes.likeCount} </span> </>
@@ -240,13 +244,14 @@ export const Home = () => {
             }
             {
                 isLoggedIn && <> 
-                <div> Sort BY <button className={ sortByLatest && 'sort-btn-active' } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending && 'sort-btn-active' } onClick={ handleTrending } > Trending </button> </div>
-                <div> Suggested users to follow </div>
+                <div className="sortby-container" > Sort BY <button className={ sortByLatest ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleTrending } > Trending </button> </div>
+                <div className="suggested-user-container" > Suggested users to follow 
                 <ul>
                 {
-                    suggestedUsers?.map(({ firstName, lastName, _id }) => <li> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
+                    suggestedUsers?.map(({ firstName, lastName, _id, profileUrl }) => <li> <img src={profileUrl} alt={firstName.split()[[0]]} className="suggested-user-avatar" /> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
                 }
                 </ul>
+                </div>
                 </>
             }
 
