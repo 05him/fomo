@@ -12,10 +12,12 @@
 
 .left-side-nav{
     left:0;
+    border-right: 1px solid var(--secondary-bg-color)
 }
 
 .right-side-nav{
     right:0;
+    border-left: 1px solid var(--secondary-bg-color)
 }
 
 .home-main-section{
@@ -29,9 +31,11 @@
 
 }
 
-.temp{
-    border: 1px solid  green;
+.post-container-box{
     margin: 1rem 0;
+    border: 1px solid var(--secondary-btn-color);
+    padding: 0.5rem;
+    border-radius: 15px;
 }
 
 .sort-btn-active{
@@ -72,3 +76,57 @@
     }
 }
 
+.post-user-img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post-user-data{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.left-side-nav{
+    font-size: 20px;
+    & li{
+        margin: 0.7rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 7px;
+    }
+}
+
+.right-side-nav{
+    font-size: 18px;
+    padding: 0.5rem;
+}
+
+.sortby-container{
+    margin: 0.7rem;
+}
+
+.suggested-user-container{
+    margin: 1rem;
+ & li{
+    list-style: none;
+    margin: 0.3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+ }
+}
+
+.suggested-user-avatar{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.sort-btn-inactive{
+    background: none;
+    color: white;
+    border: 1px solid var(--secondary-bg-color);
+}

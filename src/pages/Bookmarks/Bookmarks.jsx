@@ -190,7 +190,7 @@ export const BookMarks = () => {
             <ul>
             <li onClick={ () => navigate('/home') } > Home </li>
                 <li onClick={ () => navigate('/explore') } > Explore </li>
-                <li onClick={ () => navigate('/bookmarks') } > BookMarks </li>
+                <li onClick={ () => navigate('/bookmarks') } className="" > BookMarks </li>
                 <li onClick={ () => setPost({ type: 'showModal' }) }  > Create A Post </li>
             </ul>
         </aside>
@@ -198,12 +198,12 @@ export const BookMarks = () => {
     <CreatePost />
 
             {
-                postToShow?.map( ({ content, profileName, createdAt, username, _id, likes }) => <div className="temp" >
-                    <div>
-                        <img src='' alt='img' />
+                postToShow?.map( ({ content, profileName, createdAt, username, _id, likes, profileUrl }) => <div className="post-container-box" >
+                    <div className="post-user-data" >
+                        <img src={profileUrl} alt='img' className="post-user-img" />
                         <div> {profileName} @{username} </div>
-                        <div> { calculateDate(createdAt) } </div>
                     </div>
+                        <div> { calculateDate(createdAt) } </div>
                      {content} <br/>
                      <div> 
                 {/* <> <img src={ checkIfLiked(likes) ? redHeart : whiteHeart } alt='like dislike' onClick={ () => handlePostLike(_id, likes) } /> <span> {likes.likeCount} </span> </> */}
@@ -240,13 +240,14 @@ export const BookMarks = () => {
             }
             {
                 isLoggedIn && <> 
-                <div> Sort BY <button className={ sortByLatest && 'sort-btn-active' } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending && 'sort-btn-active' } onClick={ handleTrending } > Trending </button> </div>
-                <div> Suggested users to follow </div>
+                <div className="sortby-container" > Sort BY <button className={ sortByLatest ? 'sort-btn-active' : 'sort-btn-inactive'  } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending ? 'sort-btn-active' : 'sort-btn-inactive'  } onClick={ handleTrending } > Trending </button> </div>
+                <div className="suggested-user-container" > Suggested users to follow 
                 <ul>
                 {
-                    suggestedUsers?.map(({ firstName, lastName, _id }) => <li> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
+                    suggestedUsers?.map(({ firstName, lastName, _id, profileUrl }) => <li> <img src={profileUrl}  className="suggested-user-avatar" /> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
                 }
                 </ul>
+                </div>
                 </>
             }
 

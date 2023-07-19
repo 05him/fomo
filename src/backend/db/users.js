@@ -11,13 +11,15 @@ export const users = [
     lastName: "Balika",
     username: "admin",
     password: "admin",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
     },
-    {
+    { 
     _id: "9a30162a-7c0f-4844-8345-bd14924fafa9",
     firstName: "Alessandra",
     lastName: "Kunde",
     username: "alessandra",
     password: "admin",
+    profileUrl:"https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     },
     {
     _id: "e3006b7e-e96d-4672-8701-ab3e0c62f4b3",
@@ -25,6 +27,7 @@ export const users = [
     lastName: "Larkin",
     username: "jaydon",
     password: "admin",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/64.jpg",
     },
     {
     _id: "63f285b0-8783-47ac-b0e2-89951464265b",
@@ -32,6 +35,7 @@ export const users = [
     lastName: "Bins",
     username: "pedroBins",
     password: "admin",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
     },
     {
     _id: "6e7463a8-03c7-44ca-886f-cf6b920d7739",
@@ -39,5 +43,6 @@ export const users = [
     lastName: "Nader",
     username: "naderTeresa",
     password: "admin",
+    profileUrl: "https://xsgames.co/randomusers/assets/avatars/female/20.jpg",
     },
 ];
