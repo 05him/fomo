@@ -1,5 +1,6 @@
 import { useEffect, useState, useReducer } from "react";
 import axios from "axios";
+import { Route, Routes } from 'react-router-dom';
 
 import { Navbar } from "../../components/Navbar/Navbar"
 import { useAuth } from '../../';
@@ -8,7 +9,6 @@ import redHeart from '../../assets/redHeart.svg';
 import bookmark from '../../assets/bookmark.svg';
 import bookmarked from '../../assets/bookmarked.svg';
 import share from '../../assets/share.svg';
-import { faker } from '@faker-js/faker';
 
 const handleSorting = (data, action) => {
     switch(action.type){
@@ -155,9 +155,61 @@ export const Home = () => {
 
     const deletePost = async (id) => {
         console.log(id);
-        const deleteCall  = await axios.delete(`/api/posts/${id}`, {}, apiHeader);
+        const deleteCall  = await axios.delete(`/api/posts/${id}`, apiHeader);
         console.log(deleteCall);
         fetchPosts();
+    }
+
+    const HomeMainSection = () => {
+        return <>
+        {
+            postToShow?.map( ({ content, profileName, createdAt, username, _id, likes, profileUrl }) => <div className="post-container-box" >
+                <div className="post-user-data" >
+                    <img src={profileUrl} alt={profileName.split()[0]} className="post-user-img" />
+                    <div className="post-username" > {profileName} @{username} </div>
+                </div>
+                    <div> { calculateDate(createdAt) } </div>
+                 {content} <br/>
+                 <div> 
+            <> <img src={ checkIfLiked(likes) ? redHeart : whiteHeart } alt='like dislike' onClick={ () => handlePostLike(_id, likes) } /> <span> {likes.likeCount} </span> </>
+            <img src={ checkIfBookmarked(_id) ? bookmarked : bookmark } alt='bookmark' onClick={ () => handleBookmarkCall(_id) } />
+            <img src={share} alt='share' /> 
+            <br/>
+            {
+                username === loggedInUserData.username && <>
+            <button onClick={ () => setPost({ type: 'showModal', text: content, edit: true, postId: _id }) } > Edit </button>
+            <button onClick={ () => deletePost(_id) } > Delete </button>
+            </>
+            }
+            </div>
+              </div> )
+        }
+         {
+            postToShow.length===0 && <div> Follow someone or create a post </div>
+        }
+        </>
+    }
+
+    const NewToFomo = () => {
+        return     <>
+        New to FOMO <br />
+        <button> LogIn </button> <br/>
+        <button> SignUp </button>
+     
+        </>
+    }
+
+    const SuggestedUsers = () => {
+        return       <> 
+        <div className="sortby-container" > Sort BY <button className={ sortByLatest ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleTrending } > Trending </button> </div>
+        <div className="suggested-user-container" > Suggested users to follow 
+        <ul>
+        {
+            suggestedUsers?.map(({ firstName, lastName, _id, profileUrl }) => <li> <img src={profileUrl} alt={firstName.split()[[0]]} className="suggested-user-avatar" /> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
+        }
+        </ul>
+        </div>
+        </>
     }
 
 
@@ -199,63 +251,19 @@ export const Home = () => {
             }
         </aside>
         <section className="home-main-section">
-    <CreatePost />
-
-            {
-                postToShow?.map( ({ content, profileName, createdAt, username, _id, likes, profileUrl }) => <div className="post-container-box" >
-                    <div className="post-user-data" >
-                        <img src={profileUrl} alt={profileName.split()[0]} className="post-user-img" />
-                        <div className="post-username" > {profileName} @{username} </div>
-                    </div>
-                        <div> { calculateDate(createdAt) } </div>
-                     {content} <br/>
-                     <div> 
-                <> <img src={ checkIfLiked(likes) ? redHeart : whiteHeart } alt='like dislike' onClick={ () => handlePostLike(_id, likes) } /> <span> {likes.likeCount} </span> </>
-                <img src={ checkIfBookmarked(_id) ? bookmarked : bookmark } alt='bookmark' onClick={ () => handleBookmarkCall(_id) } />
-                <img src={share} alt='share' /> 
-                <br/>
-                {
-                    username === loggedInUserData.username && <>
-                <button onClick={ () => setPost({ type: 'showModal', text: content, edit: true, postId: _id }) } > Edit </button>
-                <button onClick={ () => deletePost(_id) } > Delete </button>
-                </>
-                }
-                </div>
-                  </div> )
-            }
-             {
-                postToShow.length===0 && <div> Follow someone or create a post </div>
-            }
+        <CreatePost />
+            <Routes>
+                <Route path='/' element={ <HomeMainSection /> } />
+                {/* <Route path='/explore' element={  } */}
+            </Routes>
         </section>
-        <aside className="right-side-nav">
-            {
-                !isLoggedIn &&
-            <>
-            New to FOMO <br />
-            <button> LogIn </button> <br/>
-            <button> SignUp </button>
-            <div>
-                Sort By <select>
-                    <option> Trending </option>
-                    <option> Latest </option>
-                </select>
-            </div>
-            </>
-            }
-            {
-                isLoggedIn && <> 
-                <div className="sortby-container" > Sort BY <button className={ sortByLatest ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleLatest } > Latest </button> <button className={ sortByTrending ? 'sort-btn-active' : 'sort-btn-inactive' } onClick={ handleTrending } > Trending </button> </div>
-                <div className="suggested-user-container" > Suggested users to follow 
-                <ul>
-                {
-                    suggestedUsers?.map(({ firstName, lastName, _id, profileUrl }) => <li> <img src={profileUrl} alt={firstName.split()[[0]]} className="suggested-user-avatar" /> {firstName} {lastName} <button onClick={ () => handleUserFollow(_id) } > { checkFollowedOrNot(_id) ? 'Un-Follow' : 'Follow' } </button> </li>)
-                }
-                </ul>
-                </div>
-                </>
-            }
 
+        <aside className="right-side-nav">
+            <Routes>
+                <Route path='/'  element={ isLoggedIn ? <SuggestedUsers /> : <NewToFomo /> } />
+            </Routes>
         </aside>
+
     </main>
     </>
 }

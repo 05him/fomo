@@ -95,6 +95,9 @@
         padding: 0.5rem;
         border-radius: 7px;
     }
+    & li:hover{
+        border: 1px solid var(--secondary-btn-color);
+    }
 }
 
 .right-side-nav{
