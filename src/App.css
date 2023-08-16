@@ -40,6 +40,7 @@ button{
   color: white;
   background-color: var(--primary-btn-color);
   border: none;
+  margin: 0.5rem;
 }
 
 .cursor-pointer{
@@ -67,5 +68,4 @@ button{
 @import url('./components/Logo/Logo.css');
 @import url('./components/InputField/InputField.css');
 @import url('./pages/Landing/Landing.css');
-@import url('./components/Navbar/Navbar.css');
 @import url('./pages/Home/Home.css');

@@ -28,7 +28,6 @@ export const Landing = () => {
         e.preventDefault();
         if(userName.trim().length!==0 && password.trim().length!==0){
             const loginCall = await axios.post('/api/auth/login', { username: userName, password: password });
-            console.log(loginCall)
             handleLogin(loginCall.data.foundUser, loginCall.data.encodedToken);
             navigate('/home');
         }
@@ -47,10 +46,11 @@ export const Landing = () => {
                 <div className="login-title" > LogIn </div>
                 <form>
                 <div className="input-field" > 
-        <label> Email Address <input type='text' placeholder='abc@email.com' required/> </label>
-         </div><div className="input-field" > 
-        <label> Password <input type='password' placeholder='********' required /> </label>
-         </div>
+                <label> Email Address <input type='text' placeholder='abc@email.com' onChange={ e => setUsername(e.target.value) } required/> </label>
+                </div>
+                <div className="input-field" > 
+                <label> Password <input type='password' placeholder='********' required onChange={ e => setPassword(e.target.value) } /> </label>
+                </div>
                     
                     <button className="btn-primary" onClick={ e =>  doLogin(e) } > LogIn </button>
                     <button className="btn-secondary" onClick={ e => handleGuestLogin(e) } > LogIn as Guest </button>

@@ -36,6 +36,7 @@ export const signupHandler = function (schema, request) {
       updatedAt: formatDate(),
       username,
       password,
+      profileUrl: 'https://xsgames.co/randomusers/assets/avatars/female/43.jpg',
       ...rest,
       followers: [],
       following: [],

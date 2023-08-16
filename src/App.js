@@ -18,6 +18,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/bookmarks' element={<BookMarks />} />
         <Route path='/home' element={<Home />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
