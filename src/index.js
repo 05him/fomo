@@ -7,8 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { makeServer } from "./server";
 import { ToastProvider, useToastAndLoader } from './context/ToastAndLoaderContext/ToastAndLoaderContext';
 import { AuthProvider, useAuth } from './context/AuthContext/AuthContext';
+import { PostAndProfileProvider, usePostAndProfile } from './context/PostAndProfile/PostAndProfile';
 
-export { useToastAndLoader, useAuth };
+export { useToastAndLoader, useAuth, usePostAndProfile };
 
 // Call make Server
 makeServer();
@@ -18,7 +19,9 @@ root.render(
     <BrowserRouter>
     <ToastProvider>
       <AuthProvider>
-    <App />
+        <PostAndProfileProvider>
+          <App />
+        </PostAndProfileProvider>
       </AuthProvider>
     </ToastProvider>
     </BrowserRouter>

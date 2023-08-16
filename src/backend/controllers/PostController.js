@@ -65,6 +65,7 @@ export const getAllUserPostsHandler = function (schema, request) {
 
 export const createPostHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
+  console.log({user})
   try {
     if (!user) {
       return new Response(
@@ -86,6 +87,8 @@ export const createPostHandler = function (schema, request) {
         likedBy: [],
         dislikedBy: [],
       },
+      profileName: `${user.firstName} ${user.lastName}`,
+      profileUrl: user.profileUrl,
       username: user.username,
       createdAt: formatDate(),
       updatedAt: formatDate(),
